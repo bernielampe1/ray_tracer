@@ -66,7 +66,7 @@ ca 0.1 0.1 0.1
 	translate 1 1 0
 	rotate -45 0 0 1
 	scale 1.5 1.5 0.5
-	object_flat atet.ob
+	object_flat atet.obj
 }
 
 

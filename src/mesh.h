@@ -145,16 +145,27 @@ public:
           AddVertex(pos);
         }
       } else if (line[0] == 'f') {
-        // read face here. only triangular
-        XVec3i tri;
-        int nr =
-            sscanf(line.c_str(), "f %d %d %d", &tri.x(), &tri.y(), &tri.z());
-        if (nr != 3) {
+        // read face here and make triangles if needed
+        int a, b, c, d;
+        int nr = sscanf(line.c_str(), "f %d %d %d %d", &a, &b, &c, &d);
+        if (nr == 3) {
+            XVec3i tri(a, b, c);
+            tri -= XVec3i(1);
+            AddTriangle(tri); 
+        }
+        else if (nr == 4) {
+            // break quad into two tri's
+            XVec3i tri0(a, b, c);
+            XVec3i tri1(a, c, d);
+            tri0 -= XVec3i(1);
+            tri1 -= XVec3i(1);
+            AddTriangle(tri0);
+            AddTriangle(tri1); 
+        }
+        else  {
           std::cerr << "cannot read face indices: " << line << std::endl;
           continue;
         }
-        tri -= XVec3i(1);
-        AddTriangle(tri);
       }
     }
     vector<triangle_t>::iterator ti;

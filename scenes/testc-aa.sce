@@ -47,7 +47,7 @@ rotate 36 0 0 1
 	scale 0.5 0.5 0.5
 	cr 0.8 0.4 0.4 
 	cp 0.0 0.0 0.0
-	object_flat cube.ob
+	object_flat cube.obj
 }
 
 {
@@ -56,7 +56,7 @@ rotate 36 0 0 1
 	scale 0.5 0.5 0.5
 	cr 0.5 0.4 0.9 
 	cp 0.0 0.0 0.0
-	object_flat cube.ob
+	object_flat cube.obj
 }
 
 {
