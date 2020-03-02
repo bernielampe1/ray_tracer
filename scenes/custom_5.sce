@@ -7,13 +7,13 @@ eyeup  0.0 0.0 1.0
 wdist  20.0
 fovy_deg 70
 
-nx 1280
-ny 640
+nx 640
+ny 320
 
 #options
 
-max_recursion 24
-aasample 50
+max_recursion 10
+aasample 20
                 
 # scene
 
@@ -338,9 +338,9 @@ background 0 0 0
 }
 
 {
-        ca 0.9 0.1 0.1
-        cr 1.0 0.2 0.2
-        cp 0.5 0.2 0.2
+        ca 0.1 0.9 0.1
+        cr 0.2 1.0 0.2
+        cp 0.2 0.5 0.2
 
         push_matrix
           translate 500.0 512.0 492.0
